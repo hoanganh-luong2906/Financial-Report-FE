@@ -1,5 +1,4 @@
-import AppFooter from '@/components/app.footer';
-import AppHeader from '@/components/app.header';
+import SideNav from '@/components/app.sidenav';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
@@ -17,10 +16,14 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>
-				<AppHeader />
-				{children}
-				<AppFooter />
+			<head>
+				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+			</head>
+			<body className='w-screen h-screen p-0 m-0 bg-light-gray'>
+				<div className='h-full w-full grid grid-cols-14'>
+					<SideNav />
+					<div className='col-span-12 w-full h-full'>{children}</div>
+				</div>
 			</body>
 		</html>
 	);
