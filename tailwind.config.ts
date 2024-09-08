@@ -16,6 +16,9 @@ const config: Config = {
 				'gradient-conic':
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
+			animation: {
+				normal: '1s linear',
+			},
 		},
 		colors: {
 			'light-gray': '#F5F6FA',
@@ -29,5 +32,6 @@ const config: Config = {
 		},
 	},
 	plugins: [],
+	important: true,
 };
 export default config;
